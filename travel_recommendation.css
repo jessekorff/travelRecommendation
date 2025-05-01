@@ -47,6 +47,15 @@ nav {
     color: white;
     font-style: italic;
   }
+
+  h2 {
+    font-family: arial, sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    float: bottom;
+    position: bottom;
+  }
   
   div {
     margin-bottom: 10px;
