@@ -1,18 +1,21 @@
 /* Basic CSS for the navigation bar */
 
 *{
-    margin: 10px;
     box-sizing: border-box;
 }
 nav {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     
   }
-  
+
+.logo-image {
+    width: 70px;
+    height: 70px;
+}
+
   nav ul {
     list-style-type: none;
     /* padding: 0; */
@@ -25,22 +28,24 @@ nav {
   
   nav a {
     text-decoration: none;
-    color: #333;
+    color: grey;
     font-weight: bold;
   }
   
   /* Basic CSS for the form elements */
   body {
     font-family: Arial, sans-serif;
-    margin-left: 10px;
-    padding: 10px;
     /* margin: 20px; */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/79/Bondi_from_above.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: top;
   }
-  
+
   h1 {
     margin-bottom: 20px;
-    color: darkblue;
-    background: lightblue;
+    color: white;
+    font-style: italic;
   }
   
   div {
@@ -61,36 +66,13 @@ nav {
   
   button {
     padding: 7px 15px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #d1f2d2;
+    color: darkgray;
     border: none;
     cursor: pointer;
   }
   
   button:hover {
     background-color: #45a049;
-  }
-  
-  /* Basic CSS for the report section */
-  h2 {
-    margin-top: 30px;
-  }
-  
-  #report,#result {
-    padding: 10px;
-    max-width: 400px;
-    word-wrap: break-word;
-  }
-#result{
-  height: 400px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
-  #result img{
-    width: 200px;
-    height: 100px;
   }
   
