@@ -17,6 +17,7 @@ nav {
     text-align: left;
     position: absolute;
     bottom: 100;
+    margin-bottom: 20px;
 }
 .bottom-text {
     position: absolute;
@@ -47,17 +48,17 @@ nav {
     font-weight: bold;
   }
   
-  body {
+  .body {
     font-family: Arial, sans-serif;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/79/Bondi_from_above.jpg');
+    background-image: url('https://www.lankatourexperts.com/wp-content/uploads/2023/08/Jungle-Beach-Galle.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     position: relative;
     min-height: 90vh;
   }
-
-  h1 {
+  
+  .h1 {
     color: white;
     font-size: 20px;
     font-style: italic;
@@ -66,7 +67,7 @@ nav {
 
   h2 {
     font-family: arial, sans-serif;
-    font-size: 50px;
+    font-size: 70px;
     color: white;
     font-weight: bold;
   }
@@ -116,6 +117,7 @@ nav {
     margin: 20px auto;
     text-align: left;
     position: left;
+    margin-bottom: 20px;
   }
 
 .input-box {
@@ -129,5 +131,5 @@ nav {
 }
 
 textarea.input-box {
-    height: 100px; /* Specific height for the textarea */
+    height: 100px;
 }
