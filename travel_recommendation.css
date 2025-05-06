@@ -119,13 +119,13 @@ nav {
   }
 
 .input-box {
-    width: 100%; /* Full width of the container */
-    max-width: 400px; /* Maximum width for larger screens */
-    padding: 10px; /* Space inside the input box */
-    margin-bottom: 10px; /* Space between input boxes */
-    border: 1px solid #ccc; /* Border around the input box */
-    border-radius: 5px; /* Rounded corners */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
 }
 
 textarea.input-box {

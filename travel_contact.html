@@ -18,24 +18,26 @@
   </li>
 </ul>
 </nav>
+<div class="bottom-text">
 <h2>Contact TravelBloom</h2>
-  <h2>If you don't find your ideal destination, contact us with any questions or requests.</h2>
+</div>
+<br>
+<div>
+  <h2>Get in touch.</h2>
 
   <form id="contactForm">
     <div>
-      <label for="name">Name</label>
       <input type="text" class="input-box" id="name" name="name" placeholder="Your Name" required>
     </div>
     <div>
-      <label for="email">Email</label>
       <input type="email" class="input-box" id="email" name="email" placeholder="Your Email" required>
     </div>
-    <div class="textbox">
-      <label for="message">Message to TravelBloom</label>
+    <div>
       <textarea class="input-box id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
     </div>
     <button type="submit" onclick="thankyou()">Submit</button>
   </form>
+</div>
 
 <script>
     function thankyou() {
