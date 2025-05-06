@@ -48,17 +48,17 @@ nav {
     font-weight: bold;
   }
   
-  .body {
+  body {
     font-family: Arial, sans-serif;
-    background-image: url('https://www.lankatourexperts.com/wp-content/uploads/2023/08/Jungle-Beach-Galle.webp');
+    background-image: url('home/project/travelRecommendation/Jungle_Beach.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     position: relative;
     min-height: 90vh;
   }
-  
-  .h1 {
+
+  h1 {
     color: white;
     font-size: 20px;
     font-style: italic;
@@ -72,13 +72,13 @@ nav {
     font-weight: bold;
   }
 
-  .h3 {
+  h3 {
     font-family: arial, sans-serif;
     font-size: 20px;
     color: white;
   }
   
-  .div {
+  div {
     margin-top: 10px;
     margin-bottom: 10px;
   }
