@@ -1,32 +1,26 @@
+function searchDestination() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const resultDiv = document.getElementById('searchResults');
+    resultDiv.innerHTML = '';
 
-    function searchDestination() {
-        const input = document.getElementById('searchInput').value.toLowerCase();
-        const resultDiv = document.getElementById('searchResults');
-        resultDiv.innerHTML = '';
+    fetch('travel_recommendation_api.json')
+        .then(response => response.json())
+        .then(data => {
+            const countries = data.country
+            const country = countries.find(item => item.search.toLowerCase() === input);
 
-        fetch('travel_recommendation_api.json')
-          .then(response => response.json())
-          .then(data => {
-            const searchResults = data.conditions.find(item => item.name.toLowerCase() === input);
+            if (country) {
+                resultDiv.innerHTML = 'Destination found.';
 
-            if (condition) {
-              const symptoms = condition.symptoms.join(', ');
-              const prevention = condition.prevention.join(', ');
-              const treatment = condition.treatment;
-
-              resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
-
-              resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
-              resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
-              resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
+                const countryNames = countries.map(country => country.name).join(', ');
+                resultDiv.innerHTML += `<h2>${countryNames}</h2>`;
             } else {
-              resultDiv.innerHTML = 'Condition not found.';
+                resultDiv.innerHTML = 'Destination not found.';
             }
-          })
-          .catch(error => {
+        })
+        .catch(error => {
             console.error('Error:', error);
             resultDiv.innerHTML = 'An error occurred while fetching data.';
-          });
-      }
-        btnSearch.addEventListener('click', searchCondition);
+        });
+}
+        btnSearch.addEventListener('click', searchDestination);
