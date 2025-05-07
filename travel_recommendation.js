@@ -6,14 +6,18 @@ function searchDestination() {
     fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
-            const countries = data.country
+            const countries = data.country;
             const country = countries.find(item => item.search.toLowerCase() === input);
 
+            const temples = data.temple;
+            const temple = temples.find(item => item.search.toLowerCase() === input);
             if (country) {
-                resultDiv.innerHTML = 'Destination found.';
-
                 const countryNames = countries.map(country => country.name).join(', ');
-                resultDiv.innerHTML += `<h2>${countryNames}</h2>`;
+                resultDiv.innerHTML = `<h3>${countryNames}</h3>`;
+            }
+            if (temple) {
+                const templeNames = temple.map(country => temple.name).join(', ');
+                resultDiv.innerHTML = `<h3>${templeNames}</h3>`;
             } else {
                 resultDiv.innerHTML = 'Destination not found.';
             }
