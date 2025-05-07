@@ -147,20 +147,18 @@
           "search": "beach",
           "imageUrl": "copacabana.png",
           "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
-        }
-      ],
-    "beaches": [
+        },
       {
-        "id": 1,
+        "id": 3,
         "name": "Bora Bora, French Polynesia",
-        "search": "beach, beaches",
+        "search": "beaches",
         "imageUrl": "bora-bora.png",
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
       },
       {
-        "id": 2,
+        "id": 4,
         "name": "Copacabana Beach, Brazil",
-        "search": "beach, beaches",
+        "search": "beaches",
         "imageUrl": "copacabana.png",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
       }
