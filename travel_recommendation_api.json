@@ -36,7 +36,7 @@
         },
         {
           "id": 3,
-          "country": "Brazil",
+          "name": "Brazil",
           "search": "countries",
           "cities": [
             {
@@ -87,7 +87,7 @@
           },
           {
             "id": 6,
-            "country": "Brazil",
+            "name": "Brazil",
             "search": "country",
             "cities": [
               {
