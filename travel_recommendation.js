@@ -74,4 +74,20 @@ function searchDestination() {
             resultDiv.innerHTML = 'An error occurred while fetching data.';
         });
 }
-btnSearch.addEventListener('click', searchDestination);
+function resetForm() {
+    const resultDiv = document.getElementById("searchResults");
+    const titleDiv = document.getElementById("titleDiv");
+
+    resultDiv.innerHTML = "Search for beaches, temples, or countries.";
+
+    searchInput = '';
+
+    titleDiv.innerHTML = `
+        <h2 class="bottom-text">TRAVEL THE WORLD</h2>
+        <h1 class="text-box">
+            With TravelBloom, your next adventure is waiting for you! Our service scours the globe for just the right destination, whether you're looking for the luxury beach or the historical tour.
+        </h1>
+    `;
+}
+document.getElementById("btnSearch").addEventListener("click", searchDestination);
+document.getElementById("btnReset").addEventListener("click", resetForm);
