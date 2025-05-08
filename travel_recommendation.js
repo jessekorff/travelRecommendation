@@ -4,7 +4,7 @@ function searchDestination() {
     
     const titleDiv = document.getElementById('title');
     resultDiv.innerHTML = '';
-    titleDiv.innerHTML = '';
+    title.innerHTML = '';
 
     fetch('travel_recommendation_api.json')
         .then(response => response.json())
@@ -29,8 +29,7 @@ function searchDestination() {
                     output += `<h3>Country: ${country.name}</h3>`;
             
                     if (country.cities && country.cities.length > 0) {
-                        output += `<div><h3>Cities:</h3>`;
-                        output += `<ul><h3>`;
+                        output += `<div><h3>Cities:<ul>`;
                         country.cities.forEach(city => {
                             output += `<li><strong>${city.name}</strong></li>`;
                             output += `<li>${city.description}</li>`;
@@ -50,7 +49,7 @@ function searchDestination() {
                     output += `<li>${temple.description}</li>`;
                     output += `<li><img src="${temple.imageUrl}" alt="${temple.name}" style="max-width:400px;"></li>`;
                 });
-                output += `</h3></ul>`;
+                output += `</ul></h3>`;
             }
 
             if (matchedBeaches.length > 0) {
@@ -58,9 +57,9 @@ function searchDestination() {
                 matchedBeaches.forEach(beach => {
                     output += `<li>${beach.name}</li>`;
                     output += `<li>${beach.description}</li>`;
-                    output += `<li><img src="${beach.imageUrl}" alt="beach.name}" style="max-width:400px;"></li>`;
+                    output += `<li><img src="${beach.imageUrl}" alt="${beach.name}" style="max-width:400px;"></li>`;
                 });
-                output += `</h3></ul>`;
+                output += `</ul></h3>`;
             }
 
             if (matchedCountries.length === 0 && matchedTemples.length === 0 && matchedBeaches.length === 0) {
@@ -76,13 +75,13 @@ function searchDestination() {
 }
 function resetForm() {
     const resultDiv = document.getElementById("searchResults");
-    const titleDiv = document.getElementById("titleDiv");
+    const titleDiv = document.getElementById("title");
 
-    resultDiv.innerHTML = "Search for beaches, temples, or countries.";
+    resultDiv.innerHTML = `<h3>Search for beaches, temples, or countries.</h3>`;
 
-    searchInput = '';
+    document.getElementById("searchInput").value = '';
 
-    titleDiv.innerHTML = `
+    title.innerHTML = `
         <h2 class="bottom-text">TRAVEL THE WORLD</h2>
         <h1 class="text-box">
             With TravelBloom, your next adventure is waiting for you! Our service scours the globe for just the right destination, whether you're looking for the luxury beach or the historical tour.
